@@ -143,6 +143,6 @@ ${color0}Total:$color ${totaldown wlp8s0} ${alignr}${color0}Total: $color${total
 ${color0}${downspeedgraph wlp8s0 25,120 000000 00ff00} ${alignr}${upspeedgraph wlp8s0 25,120 000000 ff0000}$color
 
 # Print the tail of the Linux message log
-#${color1}LOG FILES ${hr 2}$color
-#${color0}Linux Message Log$color
-#${color4}${font Arial:size=6}${execi 30 tail -n3 /var/log/messages | fold -w50}$color$font
+${color1}LOG FILES ${hr 2}$color
+${color0}Linux Message Log$color
+${color4}${font Arial:size=6}${execi 30 tail -n3 /var/log/syslog | fold -w50}$color$font

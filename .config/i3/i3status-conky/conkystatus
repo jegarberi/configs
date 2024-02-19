@@ -59,7 +59,7 @@ TEXT
     # 
     # For most debian/ubuntu changing wls2 to wlan0, ens3f1 to eth0 and
     # enp0s20u1 should work.
-    ${if_up wlp8s0} { "full_text" : "🛜${wireless_link_bar 1,10 wlp8s0} ${wireless_bitrate wlp8s0} ${wireless_essid wlp8s0} ${addr wlp8s0}" , "color" : "\#00ff00" }, ${else}\
+    ${if_up wlp8s0} { "full_text" : "🛜${wireless_link_bar 1,10 wlp8s0} ${wireless_bitrate wlp8s0} ${wireless_essid wlp8s0} ${addr wlp8s0} ⬇️${downspeed wlp8s0} ⬆️${upspeed wlp8s0}" , "color" : "\#00ff00" }, ${else}\
         ${if_up enp9s0} { "full_text" : "Eth: ${addr enp9s0}" , "color" : "\#00ff00" }, ${else}\
            ${if_up enp0s20u1} { "full_text" : "USB: ${addr enp0s20u1}" , "color" :"\#00ff00" }, ${else}\
                 { "full_text" : "No Network" , "color" : "\#ff0000" },\
